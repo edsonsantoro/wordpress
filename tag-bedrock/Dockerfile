@@ -1,6 +1,6 @@
 FROM demyx/wordpress
 
-LABEL sh.demyx.image            demyx/wordpress:bedrock
+LABEL sh.demyx.image            santorodevstudio/wordpress:bedrock
 LABEL sh.demyx.maintainer       Demyx <info@demyx.sh>
 LABEL sh.demyx.url              https://demyx.sh
 LABEL sh.demyx.github           https://github.com/demyxco

@@ -181,13 +181,16 @@ services:
       - DEMYX_UPLOAD_LIMIT=128M
       - DEMYX_WP_CONFIG=/demyx/wp-config.php
       - TZ=America/Los_Angeles
-    image: demyx/wordpress:bedrock
+    image: santorodevstudio/wordpress:bedrock
     networks:
       - demyx
     restart: unless-stopped
     volumes:
       - demyx_log:/var/log/demyx
       - demyx_wp:/demyx
+      - /var/opt/bedrock/web/app/plugins:/demyx/web/wp/wp-content/plugins
+      - /var/opt/bedrock/web/app/themes:/demyx/web/wp/wp-content/themes
+      - /var/opt/bedrock/web/app/mu-plugins:/demyx/web/app/mu-plugins
 version: "2.4"
 volumes:
   demyx_db:
